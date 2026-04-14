@@ -1,0 +1,14 @@
+uploads = []
+generated = []
+
+[[outputs]]
+id = "fl6in6VMR0KlyHtD_TVee"
+uri = "file://attached_assets/video-with-audio-fixed.mp4"
+type = "video"
+title = "Video (QuickTime Compatible)"
+
+[[outputs]]
+id = "mPY2vvGarW8U8ONUJSyIU"
+uri = "file://attached_assets/video-with-audio-faststart.mp4"
+type = "video"
+title = "Fixed Video (QuickTime Compatible)"

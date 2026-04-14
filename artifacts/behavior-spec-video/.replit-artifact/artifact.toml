@@ -1,0 +1,31 @@
+kind = "video"
+previewPath = "/behavior-spec-video/"
+title = "Behavior Spec Explainer"
+version = "1.0.0"
+id = "artifacts/behavior-spec-video"
+router = "path"
+
+[[integratedSkills]]
+name = "video-js"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/behavior-spec-video/" ]
+localPort = 18512
+
+[services.development]
+run = "pnpm --filter @workspace/behavior-spec-video run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/behavior-spec-video", "run", "build" ]
+publicDir = "artifacts/behavior-spec-video/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "18512"
+BASE_PATH = "/behavior-spec-video/"
